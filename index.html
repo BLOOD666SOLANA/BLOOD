@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <title>Blood Boy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="fixed top-0 right-0 z-10">
+    <img src="assets/images/blood-gif.gif" alt="gif" class="w-full md:h-full h-[300px]" />
+  </div>
+  <div class="fixed top-0 left-0 z-10">
+    <img src="assets/images/blood-gif.gif" alt="gif" class="w-full md:h-full h-[300px]" />
+  </div>
+  <div id="home" class="bg_hero relative lg:h-[1074px] md:h-[700px] h-[500px]">
+    <div class="w-full absolute fisrt-edge ">
+      <img src="assets/images/section_edge.png" class="w-full md:h-[120px] xl:h-[160px] h-[80px]">
+    </div>
+    <div class="min-h-[120px]">
+      <!-- nav  -->
+      <nav class="md:px-14 md:py-5 p-2 relative md:bg-transparent ">
+        <div
+          class="bg-[#00000066] nav-body relative z-50 rounded-full text-white lg:px-10 md:px-5 pl-3 pr-5 py-4 flex justify-between items-center">
+          <!-- Toggle button for mobile -->
+          <div class="flex items-center gap-1">
+            <a href="index.html#home" class="relative z-50">
+              <img src="assets/images/logo.png" alt="logo" width="44px" class="ml-2" />
+            </a>
+          </div>
+          <div class="absolute top-0 left-0 w-full h-full">
+            <ul class="md:flex items-center gap-3 md:gap-10 hidden w-full h-full justify-center">
+              <li class="">
+                <a href="index.html#about" class="md:text-base text-sm font-normal">About</a>
+              </li>
+              <li class="">
+                <a href="index.html#tokenomics" class="md:text-base text-sm font-normal">Tokenomics</a>
+              </li>
+              <li class="">
+                <a href="index.html#how_to_buy" class="md:text-base text-sm font-normal">How to Buy</a>
+              </li>
+              <li class="">
+                <a href="index.html#community" class="md:text-base text-sm font-normal">Community</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center md:gap-2 gap-3 relative z-50">
+            <div class="">
+              <a href="https://t.me/bloodsolana"  target="_blank"><img src="assets/images/telegram.png" alt="telegram"
+                  class="md:w-[60px] md:h-[60px] w-[55px] h-[55px] rounded-full" /></a>
+            </div>
+            <div class="">
+              <a href="https://x.com/BLOODBOYSOLANA"  target="_blank"><img src="assets/images/twitter.png" alt="twitter"
+                  class="md:w-[60px] md:h-[60px] w-[55px] h-[55px] rounded-full" /></a>
+            </div>
+            <div class="toggle-btn md:hidden block relative pl-[15px]" onclick="toggleSidebar()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- sidebar -->
+      <div id="sidebar" class="sidebar">
+        <ul class="flex flex-col gap-10 pt-[150px] px-8 pb-4">
+          <li>
+            <a href="index.html#about" class="text-base font-normal">About</a>
+          </li>
+          <li>
+            <a href="index.html#tokenomics" class="text-base font-normal">Tokenomics</a>
+          </li>
+          <li>
+            <a href="index.html#how_to_buy" class="text-base font-normal">How to Buy</a>
+          </li>
+          <li>
+            <a href="index.html#community" class="text-base font-normal">Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex justify-center items-center flex-col md:my-[150px]  my-[100px] md:gap-[20px] ">
+      <div class="heading sm:mx-[50px] mx-[16px] max-w-[790px]">
+        <img src="assets/images/heaidng-1.png" class="w-full">
+        </img>
+
+      </div>
+
+      <div class="flex items-center md:gap-[20px] gap-[20px] md:mt-0 mt-[20px]">
+        <div>
+          <a  target="_blank"
+            href="https://raydium.io/swap">
+            <img src="assets/images/buy-now.png" alt="buy-now" class="md:w-[230px]  w-[120px]" />
+          </a>
+        </div>
+        <div>
+          <a  target="_blank" href="https://dexscreener.com">
+            <img src="assets/images/chart.png" alt="chart" class="md:w-[230px] w-[120px]" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about  -->
+  <div id="about" class="About_bg overflow-x-hidden md:overflow-visible mt-[-2px] lg:px-20 md:px-10 px-5 py-[30px] ">
+    
+    <h2 class="lg:text-[53px] md:text-[40px] text-3xl text-center xl:mt-[30px] relative z-10 ">
+      ABOUT BLOODBOY
+    </h2>
+
+    <div class="flex flex-col md:flex-row justify-center items-start sm:pt-[30px]">
+      <div class="relative lg:w-[600px] md:mr-[-30px] w-full sm:h-[unset] min-h-[200px]">
+        <img src="assets/images/about-2.png" alt="about 2" class="sm:w-full max-w-[120%] w-[120%] contract-center" />
+        <p id="copyText"
+          class="cursor-pointer absolute-center mt-[-2.5%] xl:text-base lg:text-[12px] md:text-[9px] text-[11px]">
+          TBA
+        </p>
+        <img id="copybutton" onclick="copyAddress()" src="assets/images/btn-copy.png" class=" absolute absolute-x-center w-[120px]  xl:bottom-[45px] md:bottom-[30px] bottom-[20px] cursor-pointer"/>
+      </div>
+      <!-- for desktop  -->
+      <div class="relative lg:w-[600px] md:ml-[-30px] ">
+        <img src="assets/images/community-back.png" alt="about 2" class=""/>
+        <div
+          class="absolute section-center max-w-[60%] md:max-w-[70%] w-full  pt-[8%] flex flex-col xl:gap-6 md:gap-2 gap-2.5 justify-center items-center">
+          <div class="flex sm:gap-3 gap-2 flex-wrap justify-center items-center md:p-0 p-[10px]">
+            <a  target="_blank" href="https://x.com/BLOODBOYSOLANA"
+            class="relative xl:w-[185px] lg:w-[150px] md:w-[120px]">
+              <img src="assets/images/btn-back.png" class="w-full hidden md:block" />
+              <div class="md:absolute relative top-0 left-0 w-full h-full flex justify-center gap-[10px] items-center md:py-[8px] md:px-[30px]  sm:p-[20px] p-[15px] md:bg-transparent bg-[#1D0000] rounded-full">
+                <img src="assets/images/icon-x.png" alt="" class=" md:h-full md:w-[auto] sm:h-[40px] sm:w-[40px] h-[20px] w-[20px]" />
+                <p class="hidden md:block lg:text-[15px] md:text-[12px] text-white "><strong>Twitter</strong></p>
+              </div>
+            </a>
+            <a  target="_blank" href="https://dexscreener.com"
+            class="relative xl:w-[185px] lg:w-[150px] md:w-[120px]">
+              <img src="assets/images/btn-back.png" class="w-full hidden md:block" />
+              <div class="md:absolute static top-0 left-0 w-full h-full flex justify-center gap-[10px] items-center md:py-[8px] md:px-[30px]  sm:p-[20px] p-[15px] md:bg-transparent bg-[#1D0000] rounded-full">
+                <img src="assets/images/icon-dexscreener.png" alt="" class=" md:h-full md:w-[auto] sm:h-[40px] sm:w-[40px] h-[20px] w-[20px]" />
+                <p class="hidden md:block lg:text-[15px] md:text-[12px] text-white"><strong>DEXScreener</strong></p>
+              </div>
+            </a>
+            <a  target="_blank" href="https://www.instagram.com"
+            class="relative xl:w-[185px] lg:w-[150px] md:w-[120px]">
+              <img src="assets/images/btn-back.png" class="w-full hidden md:block" />
+              <div class="md:absolute relative top-0 left-0 w-full h-full flex justify-center gap-[10px] items-center md:py-[8px] md:px-[30px]  sm:p-[20px] p-[15px] md:bg-transparent bg-[#1D0000] rounded-full">
+                <img src="assets/images/icon-instagram.png" alt="" class=" md:h-full md:w-[auto] sm:h-[40px] sm:w-[40px] h-[20px] w-[20px]" />
+                <p class="hidden md:block lg:text-[15px] md:text-[12px] text-white"><strong>Instagram</strong></p>
+              </div>
+            </a>
+            <a href="https://www.coingecko.com" 
+            class="relative xl:w-[185px] lg:w-[150px] md:w-[120px]">
+              <img src="assets/images/btn-back.png" class="w-full hidden md:block" />
+              <div class="md:absolute relative top-0 left-0 w-full h-full flex justify-center gap-[10px] items-center md:py-[8px] md:px-[30px]  sm:p-[20px] p-[15px] md:bg-transparent bg-[#1D0000] rounded-full">
+                <img src="assets/images/icon-coingecko.png" alt="" class=" md:h-full md:w-[auto] sm:h-[40px] sm:w-[40px] h-[20px] w-[20px]" />
+                <p class="hidden md:block hidden md:block lg:text-[15px] md:text-[12px] text-white"><strong>CoinGeoko</strong></p>
+              </div>
+            </a>
+            <a  target="_blank" href="https://www.youtube.com"
+            class="relative xl:w-[185px] lg:w-[150px] md:w-[120px]">
+              <img src="assets/images/btn-back.png" class="w-full hidden md:block" />
+              <div class="md:absolute relative top-0 left-0 w-full h-full flex justify-center gap-[10px] items-center md:py-[8px] md:px-[30px]  sm:p-[20px] p-[15px] md:bg-transparent bg-[#1D0000] rounded-full">
+                <img src="assets/images/icon-youtube.png" alt="" class=" md:h-full md:w-[auto] sm:h-[40px] sm:w-[40px] h-[20px] w-[20px] h-[20px]" />
+                <p class="hidden md:block lg:text-[15px] md:text-[12px] text-white "><strong>Youtube</strong></p>
+              </div>
+            </a>
+            <a target="_blank" href="https://dexscreener.com/"
+            class="relative xl:w-[185px] lg:w-[150px] md:w-[120px]">
+              <img src="assets/images/btn-back.png" class="w-full hidden md:block" />
+              <div class="md:absolute relative top-0 left-0 w-full h-full flex justify-center gap-[10px] items-center md:py-[8px] md:px-[30px]  sm:p-[20px] p-[15px] md:bg-transparent bg-[#1D0000] rounded-full">
+                <img src="assets/images/icon-dextools.png" alt="" class=" md:h-full md:w-[auto] sm:h-[40px] sm:w-[40px] h-[20px] w-[20px]" />
+                <p class="hidden md:block  lg:text-[15px] md:text-[12px] text-white"><strong>DEXTools</strong></p>
+              </div>
+            </a>
+            <a target="_blank" href="https://warpcast.com"
+            class="relative xl:w-[185px] lg:w-[150px] md:w-[120px]">
+              <img src="assets/images/btn-back.png" class="w-full hidden md:block" />
+              <div class="md:absolute relative top-0 left-0 w-full h-full flex justify-center gap-[10px] items-center md:py-[8px] md:px-[30px]  sm:p-[20px] p-[15px] md:bg-transparent bg-[#1D0000] rounded-full">
+                <img src="assets/images/icon-w.png" alt="" class=" md:h-full md:w-[auto] sm:h-[40px] sm:w-[40px] h-[20px] w-[20px]" />
+                <p class="hidden md:block lg:text-[15px] md:text-[12px] text-white"><strong>Warpcast</strong></p>
+              </div>
+            </a>
+            <a target="_blank" href="https://coinmarketcap.com"
+            class="relative xl:w-[185px] lg:w-[150px] md:w-[120px]">
+              <img src="assets/images/btn-back.png" class="w-full hidden md:block" />
+              <div class="md:absolute relative top-0 left-0 w-full h-full flex justify-center gap-[10px] items-center md:py-[8px] md:px-[30px]  sm:p-[20px] p-[15px] md:bg-transparent bg-[#1D0000] rounded-full">
+                <img src="assets/images/icon-coinmarket.png" alt="" class=" md:h-full md:w-[auto] sm:h-[40px] sm:w-[40px] h-[20px] w-[20px]" />
+                <p class="hidden md:block lg:text-[15px] md:text-[12px] text-white"><strong>CoinMarketCap</strong></p>
+              </div>
+            </a>
+            <a target="_blank" href="https://t.me/bloodsolana"
+            class="relative xl:w-[185px] lg:w-[150px] md:w-[120px]">
+              <img src="assets/images/btn-back.png" class="w-full hidden md:block" />
+              <div class="md:absolute relative top-0 left-0 w-full h-full flex justify-center gap-[10px] items-center md:py-[8px] md:px-[30px]  sm:p-[20px] p-[15px] md:bg-transparent bg-[#1D0000] rounded-full">
+                <img src="assets/images/icon-telegram.png" alt="" class=" md:h-full md:w-[auto] sm:h-[40px] sm:w-[40px] h-[20px] w-[20px]" />
+                <p class="hidden md:block lg:text-[15px] md:text-[12px] text-white"><strong>Telegram</strong></p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- for desktop  -->
+    </div>
+    <div class="flex items-center justify-center flex-col md:mt-0 mt-[30px]">
+      <h2
+        class="lg:text-[53px] md:text-[40px] text-3xl text-center md:mb-[-30px] md:leading-tight md:max-w-[744px] max-w-[500px] w-full">
+        Bloodboy, Pumping from the heart to the chart
+      </h2>
+      <div class="flex flex-col md:flex-row justify-center md:mt-0 md:gap-0 ">
+        <div class="relative">
+          <img src="assets/images/about-3.png" alt="about 3" class="lg:w-[500px]" />
+          <div class=" absolute left-[20%] top-[27%] w-[58%] h-[50%]">
+            <div class="sm:text-[20px] md:text-[18px] lg:text-[24px] text-center text-[16px] token-text">BLOODBOY LAB
+              REPORT</div>
+            <div
+              class="pt-4 text-[13px] sm:text-[16px] md:text-[14px] lg:text-[18px] leading-normal text-blue-gray-500/80">
+              <strong>Parent:</strong> Matt Furie Character
+              <p class="pt-4"><strong></strong> Made its way on ETH late 2023
+                <strong></strong></p>
+              <div class="flex"><strong class="pl-2"></strong>
+                <div class="pl-2"></div>
+              </div>
+              <div class="flex"><strong class="pl-2"></strong>
+                <div class="pl-2"><strong></strong> Now going to dominate SOL </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="">
+          <img src="assets/images/about-4.png" alt="about 3" class="lg:w-[500px]" />
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tokenomics -->
+  <div class="Tokenomics_bg lg:px-20 md:px-10 md:py-[150px] px-5 flex flex-col mt-0 justify-center items-center"
+    id="tokenomics">
+    <div class="w-full absolute section-edge">
+      <img src="assets/images/section_edge.png" class="w-full md:h-[120px] xl:h-[160px] h-[80px]">
+    </div>
+    <h2 class="lg:text-[53px] md:text-[40px] text-3xl text-center md:leading-normal pt-5">
+      TOKENOMICS
+    </h2>
+    <div class="mt-5 relative">
+      <img src="assets/images/testimonic-2.png" alt="testimonic-2" class="lg:w-[552px] w-full" />
+      <div
+        class="absolute left-[20%] top-[19%] w-[60%] h-[58%] flex flex-col md:gap-[0px] justify-between md:text-start text-center">
+        <div class="w-full flex items-center min-h-[40px]">
+          <div class="sm:text-[20px] text-[15px] w-[40%] ">Total Supply</div>
+          <div class="sm:text-[33px] text-[20px] token-text">1 billion</div>
+        </div>
+        <div class="w-full flex items-center min-h-[40px]">
+          <div class="sm:text-[20px] text-[15px] min-w-[40%]">Buy/Sell Tax</div>
+          <div class="sm:text-[33px] text-[20px] token-text">0/0%</div>
+        </div>
+        <div class="w-full flex items-center min-h-[40px]">
+          <div class="sm:text-[20px] text-[15px] min-w-[40%]">Ownership</div>
+          <div class="sm:text-[33px] text-[20px] token-text">RENOUNCED</div>
+        </div>
+        <div class="w-full flex items-center min-h-[40px]">
+          <div class="sm:text-[20px] text-[15px] w-[40%]">Liquidity</div>
+          <div class="sm:text-[33px] text-[20px] token-text">BURNT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- how to -->
+  <div id="how_to_buy"
+    class="howto_bg lg:h-[1068px] sm:py-[100px] py-[30px] px-5 flex flex-col justify-center md:text-start items-center">
+    <div class="w-full absolute section-edge">
+      <img src="assets/images/section_edge.png" class="w-full md:h-[120px] xl:h-[160px] h-[80px]">
+    </div>
+    <img src="assets/images/howto_title.png" class="md:hidden">
+    <h2 class="lg:text-[53px] md:text-[40px] text-3xl text-center md:leading-normal md:block hidden mb-[-70px]">
+      HOW TO BUY
+    </h2>
+    <!-- mobile  -->
+    <div class="relative mt-5 md:hidden block">
+      <div class="relative mb-3 border-[#c70707] border-2 border-solid bg-[#000000d0] rounded-lg">
+        <h6 class="mb-0">
+          <button
+            class="relative flex items-center w-full p-4 font-semibold text-left text-white transition-all ease-in cursor-pointer text-slate-700 rounded-t-1 group text-dark-500"
+            data-collapse-target="animated-collapse-1">
+            <h3>Create a wallet
+            </h3>
+            <i
+              class="absolute right-0 pt-1 mr-3 text-[#FF5319] text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-1" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4 pt-0 text-sm leading-normal text-blue-gray-500/80">
+            Download & set up your wallet of choice. (We recommend
+            Phantom Wallet). You can download the wallet as a browser extension
+            or as an app on you phone at no cost. Please ensure that you
+            save your secret recovery phrase in a secure location after
+            creating your wallet & do not share it with anybody.
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mb-3 border-[#c70707] border-2 border-solid bg-[#000000d0] rounded-lg">
+        <h6 class="mb-0">
+          <button
+            class="relative flex items-center w-full p-4 font-semibold text-left text-white transition-all ease-in cursor-pointer text-slate-700 rounded-t-1 group text-dark-500"
+            data-collapse-target="animated-collapse-2">
+            <h3>Get your SOL</h3>
+            <i
+              class="absolute right-0 pt-1 mr-3 text-[#FF5319] text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-2" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4  pt-0 text-sm leading-normal text-blue-gray-500/80">
+            If your wallet does not yet have Eth (Ethereum) you can purchase
+            it directly from Metamask or transfer it from a centralized
+            exchange (Coinbase, Kraken etc) and withdraw it to your wallet.
+          </div>
+        </div>
+      </div>
+      <div class="relative mb-3 border-[#c70707] border-2 border-solid bg-[#000000d0] rounded-lg">
+        <h6 class="mb-0">
+          <button
+            class="relative flex items-center w-full p-4 font-semibold text-left text-white transition-all ease-in cursor-pointer text-slate-700 rounded-t-1 group text-dark-500"
+            data-collapse-target="animated-collapse-4">
+            <h3>Go To Raydium</h3>
+            <i
+              class="absolute right-0 pt-1 mr-3 text-[#FF5319] text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-4" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4  pt-0 text-sm leading-normal text-blue-gray-500/80">
+            Go to https://raydium.io/swap (Metamask features an integrated browser)
+            to connect your wallet. Paste in the $BLOOD contract address
+            into the field that you want to exchange/swap your SOL for.
+          </div>
+        </div>
+      </div>
+      <div class="relative mb-3 border-[#c70707] border-2 border-solid bg-[#000000d0] rounded-lg">
+        <h6 class="mb-0">
+          <button
+            class="relative flex items-center w-full p-4 font-semibold text-left text-white transition-all ease-in cursor-pointer text-slate-700 rounded-t-1 group text-dark-500"
+            data-collapse-target="animated-collapse-3">
+            <h3>Swap SOL for $BLOOD</h3>
+            <i
+              class="absolute right-0 pt-1 mr-3 text-[#FF5319] text-base transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+          </button>
+        </h6>
+        <div data-collapse="animated-collapse-3" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="p-4  pt-0 text-sm leading-normal text-blue-gray-500/80">
+            Choose the amount of SOL you want to exchange for $BLOOD and
+            click “Swap”. You will have to follow the prompts in your wallet
+            to confirm the swap action. Congratulations! You have now given
+            your wallet a transfusion of $Blood.
+          </div>
+        </div>
+      </div>
+      <div class="mt-[20px] flex justify-center">
+        <a  target="_blank" href="https://raydium.io/swap">
+          <img src="assets/images/buy-now.png" alt="buy-now" class="md:w-[183px] md:h-[101px] w-[120px]" />
+        </a>
+      </div>
+    </div>
+
+    <!-- desktop  -->
+    <div class="mt-5 relative md:block hidden">
+      <img src="assets/images/how-to-box.png" alt="testimonic-2" class="max-w-[1200px] w-full " />
+
+      <div class="absolute bottom-[14%] absolute-x-center pl-1">
+        <a  target="_blank" href="https://raydium.io/swap">
+          <img src="assets/images/buy-now.png" alt="buy-now" class="md:w-[183px] md:h-[101px] w-[80px]" />
+        </a>
+      </div>
+      <div class="absolute top-0 left-0 pt-[18%] px-[19%]">
+        <div class="flex justify-between  w-full">
+          <div class="max-w-[45%]">
+            <h3>Create a wallet</h3>
+            <p class="lg:text-[13px] lg:mt-2 text-[9px]">
+              Download and install a crypto wallet (Phantom is recommended). It's free & available as a browser
+              extension or phone app. Make sure to save your secret recovery phrase securely & never share it.
+            </p>
+          </div>
+          <div class="max-w-[45%]">
+            <h3>Get your SOL</h3>
+            <p class="lg:text-[13px] lg:mt-2 text-[9px]">
+              If your wallet does not yet have SOL (Solana) you can purchase it directly from Metamask or transfer it
+              from a centralized exchange (Coinbase, Kraken etc) and withdraw it to your wallet.
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-between  w-full lg:mt-[8%] md:mt-[8%]">
+          <div class="max-w-[45%]">
+            <h3>Go To Raydium</h3>
+            <p class="lg:text-[13px] lg:mt-2 text-[9px]">
+              Go to https://raydium.io/swap (Phantom features an integrated browser) to connect your wallet. Paste in the
+              $BLOOD contract address into the field that you want to exchange/swap your Eth for.
+            </p>
+          </div>
+          <div class="max-w-[45%]">
+            <h3>Swap SOL for $BLOOD</h3>
+            <p class="lg:text-[13px] lg:mt-2 text-[9px]">
+              Enter the amount of SOL you want to swap for $BLOOD and click "Swap". Confirm the prompts and transactions
+              in your wallet. Congrats, your portfolio is now pumping with $BLOOD!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="community"
+    class="bottom_bg lg:h-[1068px] md:h-[550px] h-[400px] lg:px-20 md:px-10 px-5 flex flex-col justify-center items-center">
+    <div class="w-full absolute section-edge">
+      <img src="assets/images/section_edge.png" class="w-full md:h-[120px] xl:h-[160px] h-[80px]">
+    </div>
+    <h2 class="lg:text-[53px] md:text-[40px] text-2xl text-center md:leading-normal md:pt-[100px] pt-10 max-w-[850px]">
+      Join our community and become part of the $BLOOD Family!
+    </h2>
+    <div class="relative lg:mt-20 md:mt-10 md:mt-10 mt-6">
+      <img src="assets/images/social.png" alt="social" class="md:w-[500px] md:h-[300px] w-[250px]" />
+      <div class="absolute md:top-[32%] md:left-[20%] top-[32%] left-[24%] flex flex-col items-center md:gap-5 gap-3">
+        <a href="https://t.me/bloodsolana" target="_blank">
+          <img src="assets/images/tele-2.png" alt="telegram"
+            class="md:w-[300px] w-[130px] md:h-[50px] object-contain" />
+        </a>
+        <a href="https://x.com/BLOODBOYSOLANA"  target="_blank">
+          <img src="assets/images/twitter-2.png" alt="twitter"
+            class="md:w-[300px] w-[130px] md:h-[50px] object-contain" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <h3 class="text-center p-4 text-sm">©2024 BloodBoy Community</h3>
+  <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+
+  <!-- gsap  -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <script>
+    // var tl = gsap.timeline()
+    // tl.from('nav a, img ', {
+    //   y: 100,
+    //   duration: 0.8,
+    //   delay: 1,
+    //   stagger: 0.15,
+    //   opacity: 0,
+    // })
+
+    // tl.from('', {
+    //   y: 100,
+    //   duration: 0.8,
+    //   delay: 1,
+    //   stagger: 0.15,
+    //   opacity: 0,
+    //   scrollTriger: {},
+    // })
+  </script>
+  <!-- gsap  -->
+  <!-- script  -->
+  <!-- <script src="/assets/js/gsap.js"></script> -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

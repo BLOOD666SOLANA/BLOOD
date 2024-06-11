@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(../font/mrsmonsterexpand.ttf);
+}
+
+h2 {
+    font-family: font1;
+
+    stroke: 1px #7E200B;
+    text-shadow: 2px 2px 10px #000, 0 0 5px #7E200B;
+
+
+}
+
+h3 {
+    font-family: font1;
+    background: -webkit-linear-gradient(#FF5319, #FFBB00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+}
+
+body {
+    font-family: "Arimo", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
+}
+
+.token-text{
+    font-family: font1;
+}
+
+nav{
+    z-index: 1000;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav.sticky .nav-body {
+    background-color: #000000c8;
+}
+
+.menu-item {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section-edge{
+    top:0px;
+    left:0px;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.fisrt-edge{
+    bottom:0px;
+    left:0px;
+    transform: translateY(50%);
+    z-index: 5;
+
+}
+
+.absolute-x-center{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    /* Hide sidebar by default */
+    width: 250px;
+    height: 100%;
+    background-color: #000;
+    transition: all 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    right: 0;
+    /* Show sidebar when active */
+}
+
+.toggle-btn {
+    z-index: 100000;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.absolute-center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contract-center{
+    position: static;
+    transform: unset;
+
+}
+.toggle-btn.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.toggle-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-btn.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.bg_hero {
+    background-image: url(../images/hero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.About_bg {
+    background-image: url(../images/about.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.Tokenomics_bg {
+    background-image: url(../images/Tokenomics.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.howto_bg {
+    background-image: url(../images/how-to.png);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 100%;
+    background-size: cover;
+}
+
+.bottom_bg {
+    background-image: url(../images/back_bottom.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.heading{
+    text-shadow: -5px -s5px 0 #7E200B, 5px -5px 0 #7E200B, -5px 5px 0 #7E200B, 5px 5px 0 #7E200B;
+}
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+        
+    .contract-center{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .bg_hero {
+        background-image: url(../images/mobile_back_1.png);
+    }
+    
+    .About_bg {
+        background-image: url(../images/mobile_back_2.png);
+    }
+    
+    .Tokenomics_bg {
+        background-image: url(../images/mobile_back_3.png);
+    }
+    
+    .howto_bg {
+        background-image: url(../images/mobile_back_4.png);
+    }
+}
